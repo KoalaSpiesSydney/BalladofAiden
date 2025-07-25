@@ -1,171 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Ballad of Aiden</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&family=Pacifico&family=Orbitron&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Aiden Soundtrack</title>
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      padding: 20px;
+    }
 
+    h1 {
+      color: rgb(8, 8, 74);
+      text-align: center;
+    }
+
+    #audio-player-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .playlist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .track {
+      cursor: pointer;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .play-button {
+      margin-right: 10px;
+    }
+
+    .track-info {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
+  <h1>The Ballad of Aiden Soundtrack</h1>
 
-  <header>
-    <h1>The Ballad of Aiden</h1>
-    <p>A spurned prince and his ballad-bearing steed journey through realms of riddles and ruin.</p>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop>
-
-      <source src="AandRHero.mp4" type="video/mp4">
-      Your browser does not support the video element.
-    </video>
   
-
-<p class="description" style="text-align: center;">Click on the chapter to listen to part 1.</p>
-
-
-
-    <div id="audio-player-wrapper">
+  <div id="audio-player-wrapper">
     <audio id="audio-player" controls>
       <source id="audio-source" src="" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <div id="now-playing-title">Now Playing: None</div>
-  </div>
+    <div id="now-playing-title">CLICK ON A SONG BELOW TO PLAY</div>
+</div>
 
-  </section>
-
-  <!-- Playlist Grid -->
+    <!-- Playlist Grid -->
   <section class="playlist-grid">
     <div class="playlist-column">
       <ul id="audio-playlist-left">
 
-        <li class="track" data-src="1Carefulwhatyouwish.mp3" data-title="1Carefulwhatyouwish">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="1thumbnail.mp4" type="video/mp4">
-          </video>  
-          <span>Chapter 1 - A wish</span>
-          <button class="play-button">▶</button>
-        <li class="track" data-src="2Neverexpectedthis.mp3" data-title="2Neverexpectedthis">
-          <video class="thumbnail" autoplay muted loop>  
-            <source src="2thumbnail.mp4" type="video/mp4">
-          </video>
-          <span>Chapter 2 - Unexpected</span>
-            <button class="play-button">▶</button>
-        </li>
-        <li class="track" data-src="3Itcanbe.mp3" data-title="3Itcanbe">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="3Itcanbeso.mp4" type="video/mp4">
-          </video>
-          <span>Chapter 3 - Can be</span>
-            <button class="play-button">▶</button>
-        </li>
-        <li class="track" data-src="4almostround.mp3" data-title="4almostround">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="4thumbnail.mp4" type="video/mp4">
-          </video>
-          <span>Chapter 4 - Almost Round</span>
-          <button class="play-button">▶</button>
-        </li>
-        <li class="track" data-src="5Philosophising.mp3" data-title="5Philosophising">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="5thumbnail.mp4" type="video/mp4">
-          </video>
-          <span>Chapter 5 Philosophising </span>
-          <button class="play-button">▶</button>
-        </li>
+ <li class="track" data-src="Rumpa-tum- tump, de tump de tump.mp3" data-title="Rumpa Tum tump">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Rump Tum Tump</span>
+      </li>
 
-        <li class="track" data-src="6imprisoned.mp3" data-title="6imprisoned">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="6 thumbnail tower.mp4" type="video/mp4">
-          </video>
-          <span>Chapter 6 - Imprisoned</span>
-          <button class="play-button">▶</button>
-        </li>
-      </ul>
+      <li class="track" data-src="Mmmmmimpetuous.mp3" data-title="Mmmmm impetutous">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Mmmmm impetuous</span>
+      </li>
+
+      <li class="track" data-src="fiesty.mp3" data-title="Feisty">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Fiesty</span>
+      </li>
+         <li class="track" data-src="Beautysolost.mp3" data-title="Beauty so lost">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Beauty so lost</span>
+      </li>
+      <li class="track" data-src="Runlikeanleopard.mp3" data-title="Run Like a Leopard">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Run Like a Leopard</span>
+      </li>
+        <li class="track" data-src="Thefirstandthesecond.mp3" data-title="Forever Second">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Forever second</span>
+      </li>
+         <li class="track" data-src="hmmm_mmm_marvelous.mp3" data-title="Mmm-marvelous">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Mmm-marvelous</span>
+      <li class="track" data-src="Nepoboy.mp3" data-title="Nepo boy">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Nepo Boy</span>
+      <li class="track" data-src="Bahbah1.mp3" data-title="Bah bah">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Bah Bah</span>
+        <li class="track" data-src="Dontbelievetheirlies.mp3" data-title="Don't believe their lies">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Don't believe their lies</span>
+        <li class="track" data-src="Waaaaaaah,.mp3" data-title="Waaaaah">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Waaaaah</span>
+        <li class="track" data-src="ordinary.mp3" data-title="Ordinary">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Ordinary</span>
+        <li class="track" data-src="Sabotageyeah.mp3" data-title="Sabotage">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Sabotage</span>
+        
+          </ul>
+    <div>      
     </div>
+      <h2>Mixes</h2>
+      </li>
+      <li class="track" data-src="Umdotclaplityclap.mp3" data-title="Umdotclaplityclap">
+      <button class="play-button playing">▶</button>
+      <span class="track-info">Um dot dot clapity clap meditation</span>
+       </li>
+        <li class="track" data-src="Ordinary_extended_mix_one.mp3" data-title="Ordinary_extended_mix_one">
+      <button class="play-button playing">▶</button>
+      <span class="track-info">Ordinary Extended Dance Mix</span>
+       </li>
+    </div>
+    
 
     <div class="playlist-column">
       <ul id="audio-playlist-right">
-        <li class="track" data-src="7upthevolcano.mp3" data-title="7upthevolcano">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="7thumbnail.mp4" type="video/mp4">
-          </video>
 
-          <span>Chapter 7 - Buttons for Eyes</span>
-          <button class="play-button">▶</button>
-        </li>
+        <li class="track" data-src="Iamadrummingmonkey.mp3" data-title="I am a drumming monkey">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">I am a drumming monkey</span>
+        <li class="track" data-src="Uhh.mp3" data-title="Ordinary extended mix 2">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">He's mine, uhhh</span>
+       <li class="track" data-src="Cowards.mp3" data-title="Cowards">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Cowards</span>
+      </li>
+      <li class="track" data-src="Shessodroll.mp3" data-title="She's so droll">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">She's so droll</span>
+      </li>
+     <li class="track" data-src="Uuuuuhhhhh.mp3" data-title="Uuuuuuhhhhhh">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Uuuuuuhhhhhh</span>
+      </li>
+      <li class="track" data-src="Youchoosewhoyouare.mp3" data-title="You choose who you are">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">You choose who you are</span>
+        <li class="track" data-src="Numberoneprimetimetotallyviral.mp3" data-title="Numer one totally viral block buster">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Numer one totally viral block buster</span>
+                  <li class="track" data-src="ministerforhomelandaffair.mp3" data-title="Leavinghomeinairballoon">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">I'm the Minister for Homeland Affairs</span>
+       <li class="track" data-src="Whatsthepoint.mp3" data-title="What's the point">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">What's the point</span>
+        <li class="track" data-src="leapwithhope.mp3" data-title="Leap with hope">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Leap with hope</span> 
+                <li class="track" data-src="downdowntheytrottedfree.mp3" data-title="downdowntheytrottedfree">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Down down they trotted free</span>
+      </li>
+      <li class="track" data-src="Climbeveryvolcano.mp3" data-title="Climb every volcano">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Climb every volcano</span>
+    </ul>
+    <div>
 
-        <li class="track" data-src="8Itsnotmagic.mp3" data-title="8Itsnotmagic">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="8thumbnail.mp4" type="video/mp4">
-          </video>
+   <div class="playlist-column">
+      <ul id="audio-playlist">
+    
+<h2>Sample of Part 2 Bonus Tracks</h2
 
-          <span>Chapter 8 - Not Magic</span>
-          <button class="play-button">▶</button>
-        </li>
+<p>Songs from part 2</p>
 
-        <li class="track" data-src="9BearCave.mp3" data-title="9BearCave">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="9thumbnail_1.mp4" type="video/mp4">
-          </video>
-
-          <span>Chapter 9 - Bear Cave</span>
-          <button class="play-button">▶</button>
-        </li>
-
-        <li class="track" data-src="10Sabotage.mp3" data-title="10Sabotage">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="10thumbnail_2.mp4" type="video/mp4">
-          </video>
-
-          <span>Chapter 10 - Sabotage</span>
-          <button class="play-button">▶</button>
-
-            <li class="track" data-src="11Koalaspy.mp3" data-title="11Koalaspy">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="11thumbnail_5.mp4" type="video/mp4">
-          </video>
-
-          <span>Chapter 11 - Koala Spy</span>
-          <button class="play-button">▶</button>
-
-      
-
-            <li class="track" data-src="Chapter12_mixdown.mp3" data-title="11Roundtabletbc">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="12thumbnail.mp4" type="video/mp4">
-          </video>
-          
-          
-          <span>Chapter 12 - UnRound Table</span>
-          <button class="play-button">▶</button>
-        
-      
-<li class="track" data-src="Chapter13_mixdown.mp3" data-title="Chapter 13 - Chewing Gum">
-          <video class="thumbnail" autoplay muted loop>
-            <source src="13thumbnail.mp4" type="video/mp4">  
-            </video>
-
-          <span>Chapter 13 - Gum</span>
-          <button class="play-button">▶</button>
+        <li class="track" data-src="betterinflatable.mp3" data-title="BetterInflatable">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">BetterInflatable</span>
+        <li class="track" data-src="AlgoritmoDoomScrollClick.mp3" data-title="ALgoritmo Doom Scroll Click">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Algoritmo Doom Scroll Click</span>
+        <li class="track" data-src="Onomatopoeicwords.mp3" data-title="Onomatopoeicwords">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Onomatopoeic Words</span>
+        <li class="track" data-src="braverhymeswith.mp3" data-title="Brave rhymes">
+        <button class="play-button playing">▶</button>
+        <span class="track-info">Brave rhymes</span>
+ </section>
+      </ul>
     </div>
   </section>
 
   <!-- Footer Tiles -->
   <div class="footer-grid" style="display: flex; justify-content: center; gap: 20px;">
-    <a href="morechapters.html" class="grid-btn navy" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">Part 2 chapters</a>
+    <a href="morechapters.html" class="grid-btn navy" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">Buy More Chapters</a>
     <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">Koala Spy Merch</a>
-    <a href="music.html" class="grid-btn yellow" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">Listen to Soundtrack</a>
+    <a href="index.html" class="grid-btn green" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">The ballad HOME</a>
     <a href="about.html" class="grid-btn sea-blue" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">About</a>
   </div>
 
-  <p style="text-align: center;">Attribution & Production Note:Written and produced by Justine R. Kelly and Koala Spies with the voice acting of 
-
-
+<p style="text-align: center;">Attribution & Production Note:Written and produced by Justine R. Kelly and Koala Spies with the voice acting of 
 
 
   <!-- Copyright Section -->
@@ -173,39 +207,73 @@
     <p>&copy; <span id="year"></span> Justine Kelly & Koala Spies</p>
   </footer>
 
+
+
+  </section>
+
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const audioPlayer = document.getElementById('audio-player');
-      const audioSource = document.getElementById('audio-source');
-      const nowPlayingTitle = document.getElementById('now-playing-title');
-      const tracks = document.querySelectorAll('.track');
+   document.addEventListener('DOMContentLoaded', function () {
+  const audioPlayer = document.getElementById('audio-player');
+  const audioSource = document.getElementById('audio-source');
+  const nowPlayingTitle = document.getElementById('now-playing-title');
+  const tracks = document.querySelectorAll('.track');
+  
 
-      tracks.forEach(track => {
-        track.addEventListener('click', function (event) {
-          // Prevent button from bubbling the event twice
-          if (event.target.tagName === 'BUTTON') {
-            event.stopPropagation();
-          }
+  // Convert NodeList to Array for easier indexing
+  const trackArray = Array.from(tracks);
+  let currentTrackIndex = -1;
 
-          const src = track.getAttribute('data-src');
-          const title = track.getAttribute('data-title');
+  function playTrack(index) {
+    const track = trackArray[index];
+    if (!track) return;
 
-          audioSource.src = src;
-          audioPlayer.load();
-          audioPlayer.play();
-          nowPlayingTitle.textContent = `Now Playing: ${title}`;
-        });
-      });
+    const src = track.getAttribute('data-src');
+    const title = track.getAttribute('data-title');
+
+    audioSource.src = src;
+    audioPlayer.load();
+    audioPlayer.play();
+    nowPlayingTitle.textContent = `Now Playing: ${title}`;
+    currentTrackIndex = index;
+  }
+
+  // Handle manual track selection
+  trackArray.forEach((track, index) => {
+    track.addEventListener('click', function (event) {
+      if (event.target.tagName === 'BUTTON') {
+        event.stopPropagation();
+      }
+      playTrack(index);
     });
+  });
+
+  // Auto-play next track when current one ends
+  audioPlayer.addEventListener('ended', function () {
+    const nextIndex = currentTrackIndex + 1;
+    if (nextIndex < trackArray.length) {
+      playTrack(nextIndex);
+    }
+  });
+});
+audioPlayer.addEventListener('playing', function () {
+  if (currentButton) {
+    currentButton.classList.remove('clicked');
+    currentButton.classList.add('playing'); // This persists the yellow style
+  }
+});
+
+audioPlayer.addEventListener('playing', function () {
+  document.getElementById('audio-player-wrapper').classList.add('playing');
+});
+
+
+
   </script>
 </body>
 </html>
 <link rel="stylesheet" href="styles.css">
 
+}
 
-</body>
-</html>
+
 
