@@ -49,6 +49,7 @@
       <source id="audio-source" src="" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+    
     <div id="now-playing-title">CLICK ON A SONG BELOW TO PLAY</div>
 </div>
 
@@ -195,23 +196,20 @@
     </div>
   </section>
 
-  <!-- Footer Tiles -->
-  <div class="footer-grid" style="display: flex; justify-content: center; gap: 20px;">
-    <a href="morechapters.html" class="grid-btn navy" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">Buy More Chapters</a>
-    <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">Koala Spy Merch</a>
-    <a href="index.html" class="grid-btn green" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">The ballad HOME</a>
-    <a href="about.html" class="grid-btn sea-blue" style="font-size: 1.5em; padding: 15px 30px; border-radius: 12px;">About</a>
-  </div>
+<!-- Footer Tiles -->
+<div class="footer-grid">
+  <a href="morechapters.html" class="grid-btn navy">Buy More Chapters</a>
+  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange">Koala Spy Merch</a>
+  <a href="index.html" class="grid-btn green">The Ballad of Aiden Homepage</a>
+  <a href="about.html" class="grid-btn sea-blue">The Story and team behind Aiden</a>
+</div>
 
-<p style="text-align: center;">Attribution & Production Note:Written and produced by Justine R. Kelly and Koala Spies with the voice acting of 
-
+<p style="text-align: center;">Attribution & Production Note: Written and produced by Justine R. Kelly and Koala Spies with the voice acting of</p>
 
   <!-- Copyright Section -->
   <footer style="text-align: center; padding: 20px; margin-top: 20px; background-color: #f1f1f1;">
     <p>&copy; <span id="year"></span> Justine Kelly & Koala Spies</p>
   </footer>
-
-
 
   </section>
 
@@ -269,13 +267,10 @@ audioPlayer.addEventListener('playing', function () {
 audioPlayer.addEventListener('playing', function () {
   document.getElementById('audio-player-wrapper').classList.add('playing');
 });
-
-
-
   </script>
 </body>
 </html>
 <link rel="stylesheet" href="styles.css">
 
-}
+
 
