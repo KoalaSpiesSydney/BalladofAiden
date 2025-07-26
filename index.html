@@ -2,118 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buy More Chapters – The Ballad of Aiden</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&family=Pacifico&family=Orbitron&family=Cinzel+Decorative&display=swap" rel="stylesheet">
-
+  
   <style>
-    /* Animation styles */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1.2s ease-out forwards;
+    body {
+      font-family: 'Roboto mono', sans-serif;
+      padding: 20px;
     }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    h1 {
+      color: rgb(8, 8, 74);
+      text-align: center;
     }
 
-    .form-container {
-      margin-top: 30px;
+    #audio-player-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .playlist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .track {
+      cursor: pointer;
+      margin: 10px 0;
       display: flex;
-      flex-direction: column;
       align-items: center;
     }
 
-    .form-container input[type="text"],
-    .form-container input[type="email"] {
-      padding: 10px;
-      width: 250px;
-      margin: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .play-button {
+      margin-right: 10px;
     }
 
-    .form-container input[type="submit"] {
-      padding: 12px 25px;
-      font-size: 1.2em;
-      background-color: #003366;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .form-container input[type="submit"]:hover {
-      background-color: #005099;
-    }
-
-    .hero {
-      position: relative;
+    .track-info {
+      font-weight: bold;
     }
   </style>
 </head>
-<body>
 
   <header>
     <h1>The Ballad of Aiden</h1>
-    <p>An exciting journey to discover</p>
+    <p> Journey with Aiden and his singing stallion through realms of riddles, ruin and the ridiculous.</p>
   </header>
 
-  <!-- Buy More Chapters Section -->
-  <section style="text-align: center; padding: 60px 20px;">
-    <h2 class="fade-up" style="font-family: 'Playfair Display', serif; font-size: 2.5em;">
-      Buy More Chapters – Coming December 2025
-      The entire series consists of 25 chapters.
-    </h2>
-    <p style="font-family: 'Montserrat', sans-serif; font-size: 1.2em; max-width: 800px; margin: 20px auto;">
-      Starting this December, you will be able to purchase individual chapters of <em>The Ballad of Aiden</em>, or own the full hardcopy edition and download the complete audio drama experience.
-    </p>
-    <p style="font-family: 'Montserrat', sans-serif; font-size: 1.2em; max-width: 800px; margin: 20px auto;">
-      In the meantime, we'd love it if you could complete this feedback form. If you want to be alerted when new chapters are released please put your email at the end of the form. If you want to buy the book or a Koala Spy t-shirt, please see the merch page.
-    </p>
+  <!-- Hero Section -->
+   
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop>
 
-<div style="margin-top: 30px;">
-  <iframe src="https://forms.gle/KrZ2p5ep6xo75fQg9" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
-    Loading…
-  </iframe>
-</div>
+      <source src="AandRhero.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video> 
+    
 
+    <div id="audio-player-wrapper">
+    <audio id="audio-player" controls>
+      <source id="audio-source" src="" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div id="now-playing-title">CLICK ON A CHAPTER</div>
+  </div>
+<div></div>
+  </section>
 
-  <script>
-    // Year auto update
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- Playlist Grid -->
+  <section class="playlist-grid">
+    <div class="playlist-column">
+      <ul id="audio-playlist-left">
 
-</body>
-</html>
+        <li class="track" data-src="1Carefulwhatyouwish.mp3" data-title=" Chapter 1 Careful What You Wish">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="1thumbnail.mp4" type="video/mp4">
+          </video>  
+          <span>Chapter 1 - A Careful What You Wish</span>
+          <button class="play-button playing">▶</button>
+        </li>
 
+        <li class="track" data-src="2Neverexpectedthis.mp3" data-title="Chapter 2 Never Expected This">
+          <video class="thumbnail" autoplay muted loop>  
+            <source src="2thumbnail.mp4" type="video/mp4">
+          </video>
+          <span>Chapter 2 - Never Expected This!</span>
+            <button class="play-button playing">▶</button>
+        </li>
 
-<p class fsaklj;dj</p>
+        <li class="track" data-src="3Itcanbe.mp3" data-title="Chapter 3 Can it be so?">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="3Itcanbeso.mp4" type="video/mp4">
+          </video>
+          <span>Chapter 3 - Can it be so?</span>
+            <button class="play-button playing">▶</button>
+        </li>
 
- <<!-- Footer Tiles -->
+        <li class="track" data-src="4almostround.mp3" data-title="Chapting 4 the Almost Round Table">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="4thumbnail.mp4" type="video/mp4">
+          </video>
+          <span>Chapter 4 - the Almost Round Table</span>
+          <button class="play-button playing">▶</button>
+        </li>
+        
+        <li class="track" data-src="5Philosophising.mp3" data-title="Chapter 5 Philosophising">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="5thumbnail.mp4" type="video/mp4">
+          </video>
+          <span>Chapter 5 - Philosophising </span>
+          <button class="play-button playing">▶</button>
+        </li>
+
+        <li class="track" data-src="6imprisoned.mp3" data-title="Chapter 6 the Tower of Liquorice">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="6 thumbnail tower.mp4" type="video/mp4">
+          </video>
+          <span>Chapter 6 - the Tower of Liquorice</span>
+          <button class="play-button playing">▶</button>
+        </li>
+          <li class="track" data-src="6imprisoned.mp3" data-title="Sponsor Aiden">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="6 thumbnail tower.mp4" type="video/mp4">
+          </video>
+          <span>Sponsor Aiden</span>
+          <button class="play-button playing">▶</button>
+          </li>
+      </ul>
+    </div>
+    
+
+    <div class="playlist-column">
+      <ul id="audio-playlist-right">
+        <li class="track" data-src="7upthevolcano.mp3" data-title="Chapter 7 Journey Up the Volcano">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="7thumbnail.mp4" type="video/mp4">
+          </video>
+
+          <span>Chapter 7 - Journey Up the Volcano</span>
+          <button class="play-button playing">▶</button>
+        </li>
+
+        <li class="track" data-src="8Itsnotmagic.mp3" data-title="Chapter 8 Not Magic">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="8thumbnail.mp4" type="video/mp4">
+          </video>
+
+          <span>Chapter 8 - Not Magic</span>
+          <button class="play-button playing">▶</button>
+          </li>
+
+          <li class="track" data-src="9BearCave.mp3" data-title="Chapter 9 Bears in Caves">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="9thumbnail_1.mp4" type="video/mp4">
+          </video>
+
+          <span>Chapter 9 - Bear Cave</span>
+          <button class="play-button playing">▶</button>
+        </li>
+
+        <li class="track" data-src="10Sabotage.mp3" data-title="Chapter 10 Sabotage">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="10thumbnail_2.mp4" type="video/mp4">
+          </video>
+
+          <span>Chapter 10 - Sabotage</span>
+          <button class="play-button playing">▶</button>
+
+            <li class="track" data-src="11Koalaspy.mp3" data-title="Chapter 11 the Koala Spy">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="11thumbnail_5.mp4" type="video/mp4">
+          </video>
+
+          <span>Chapter 11 - the Koala Spy</span>
+          <button class="play-button playing">▶</button>
+        </li>
+      
+            <li class="track" data-src="Chapter12_mixdown.mp3" data-title="Chapter 11 the Second meeting of the Almost Round Table">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="12thumbnail.mp4" type="video/mp4">
+          </video>
+          
+          <span>Chapter 12 - the 2nd Almost Round Table</span>
+          <button class="play-button playing">▶</button>
+        </li>
+      
+          <li class="track" data-src="Chapter13_mixdown.mp3" data-title="Chapter 13 - Chewing Gum">
+          <video class="thumbnail" autoplay muted loop>
+            <source src="13thumbnail.mp4" type="video/mp4">  
+            </video>
+
+          <span>Chapter 13 - Magic Gum?</span>
+          <button class="play-button playing">▶</button>
+          </li>
+    </div>
+  </section>
+
+ <!-- Footer Tiles -->
 <div class="footer-grid">
   <a href="music.html" class="grid-btn navy">Listen to the soundtrack of Aiden</a>
-  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange">Koala Spy Merch</a>
+  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange">Buy the book or Koala Spy Merch</a>
   <a href="index.html" class="grid-btn green">The Ballad of Aiden Homepage</a>
   <a href="about.html" class="grid-btn sea-blue">The Story and team behind Aiden</a>
 </div>
 
 <p style="text-align: center;">Attribution & Production Note: Written and produced by Justine R. Kelly and Koala Spies with the voice acting of</p>
+ 
+
+
+  <!-- Copyright Section -->
+  <footer style="text-align: center; padding: 20px; margin-top: 20px; background-color: #f1f1f1;">
+    <p>&copy; <span id="year"></span> Justine Kelly & Koala Spies</p>
+  </footer>
+
+  </section>
 
   <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const audioPlayer = document.getElementById('audio-player');
+      const audioSource = document.getElementById('audio-source');
+      const nowPlayingTitle = document.getElementById('now-playing-title');
+      const tracks = document.querySelectorAll('.track');
+
+      tracks.forEach(track => {
+        track.addEventListener('click', function (event) {
+          // Prevent button from bubbling the event twice
+          if (event.target.tagName === 'BUTTON') {
+            event.stopPropagation();
+          }
+
+          const src = track.getAttribute('data-src');
+          const title = track.getAttribute('data-title');
+
+          audioSource.src = src;
+          audioPlayer.load();
+          audioPlayer.play();
+          nowPlayingTitle.textContent = `Now Playing: ${title}`;
+
+          document.getElementById('audio-player-wrapper').classList.add('playing');
  
+          const button = document.querySelector('.play-button');
+button.textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
+
+        });
+      });
+    });
   </script>
 </body>
 </html>
 <link rel="stylesheet" href="styles.css">
 
+<!-- Include MediaElement.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css" />
+
+<!-- Include MediaElement.js JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
 
 </body>
 </html>
+<link rel="stylesheet" href="styles.css">
+
+}
+
