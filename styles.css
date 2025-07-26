@@ -31,7 +31,7 @@ h1 {
 
 .hero-video {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   aspect-ratio: 9/4;
   object-fit: cover;
   display: block;
@@ -42,7 +42,7 @@ h1 {
 #now-playing-title {
   font-size: 1.6em;
   font-weight: bold;
-  font-family: 'Bangers', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   color: #380580;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
   margin-top: 30px;
@@ -50,7 +50,7 @@ h1 {
   text-align: center;
 }
 #audio-player-wrapper.playing #now-playing-title {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   font-weight: bold;
   color: #a917e3;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
@@ -179,11 +179,6 @@ h1 {
   max-width: 600px;
   margin: 0 auto;
   overflow: hidden;
-}
- .track {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 .thumbnail {
     width: 100%;
@@ -472,8 +467,65 @@ footer {
 
 @media (max-width: 768px) {
   .button-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    overflow: hidden;
+  grid-template-columns: 1fr;
+  text-align: center;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+}
+/* Mobile-first default */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Add horizontal breathing room */
+  box-sizing: border-box;
+}
+
+.grid-btn {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 12px 20px;
+}
+
+/* Tablet & up: Side-by-side layout */
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .grid-btn {
+    max-width: 300px;
+  }
+}
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.grid-btn {
+  font-size: 1.2em;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Optional: make buttons grow full-width on very small screens */
+@media (max-width: 480px) {
+  .grid-btn {
+    flex: 1 1 100%;
+    font-size: 1.1em;
+    padding: 14px;
   }
 }
