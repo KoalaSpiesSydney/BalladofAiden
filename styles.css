@@ -106,6 +106,7 @@ h1 {
   color: rgb(112, 30, 227);
   border-radius: 10px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #audio-player-wrapper {
@@ -146,9 +147,6 @@ h1 {
   padding: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-#audio-player {
   width: 100%;
   border-radius: 6px;
 }
@@ -293,6 +291,7 @@ footer {
   cursor: pointer;
   background: #e8b8b8;
   border-radius: 6px;
+  margin-bottom: 30px;
 }
 
 .track:hover {
@@ -354,10 +353,6 @@ footer {
   }
 
 .grid-btn {
-  font-family: "Roboto Mono", sans-serif;
-}
- /* Adjust this value to increase spacing */
-  .grid-btn {
   font-family: "Roboto Mono", sans-serif;
   font-size: 1.5em;
   font-weight: bold;
@@ -436,7 +431,7 @@ footer {
 /* Default mobile-first styles */
 .button-container {
   display: block;
-  margin: auto;
+  margin: 30px;
   text-align: center;
   overflow: hidden;
 }
@@ -471,7 +466,7 @@ footer {
   justify-content: center;
   gap: 30px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
   overflow: hidden;
 }
 
@@ -482,4 +477,3 @@ footer {
     overflow: hidden;
   }
 }
-
