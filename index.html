@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -17,14 +18,14 @@
   </header>
 
   <!-- Hero Section -->
+   
   <section class="hero">
     <video class="hero-video" autoplay muted loop>
 
-      <source src="AandRHero.mp4" type="video/mp4">
+      <source src="AandRhero.mp4" type="video/mp4">
       Your browser does not support the video element.
-    </video>
-  
-
+    </video> 
+    
 
     <div id="audio-player-wrapper">
     <audio id="audio-player" controls>
@@ -33,7 +34,7 @@
     </audio>
     <div id="now-playing-title">CLICK ON A CHAPTER BELOW TO PLAY</div>
   </div>
-
+<div></div>
   </section>
 
   <!-- Playlist Grid -->
@@ -90,6 +91,7 @@
         </li>
       </ul>
     </div>
+    
 
     <div class="playlist-column">
       <ul id="audio-playlist-right">
@@ -168,12 +170,12 @@
   <p style="text-align: center;">Attribution & Production Note:Written and produced by Justine R. Kelly and Koala Spies with the voice acting of 
 
 
-
-
   <!-- Copyright Section -->
   <footer style="text-align: center; padding: 20px; margin-top: 20px; background-color: #f1f1f1;">
     <p>&copy; <span id="year"></span> Justine Kelly & Koala Spies</p>
   </footer>
+
+  </section>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -213,6 +215,11 @@ button.textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
 </html>
 <link rel="stylesheet" href="styles.css">
 
+<!-- Include MediaElement.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css" />
+
+<!-- Include MediaElement.js JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
 
 </body>
 </html>
