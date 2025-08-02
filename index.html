@@ -3,17 +3,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+<link rel="stylesheet" href="https://use.typekit.net/ahv5tjx.css">
   
   <style>
     body {
-      font-family: 'Roboto mono', sans-serif;
-      padding: 20px;
-    }
 
     h1 {
-      color: rgb(8, 8, 74);
       text-align: center;
-    }
+
+}
 
     #audio-player-wrapper {
       text-align: center;
@@ -43,8 +41,8 @@
 </head>
 
   <header>
-    <h1>The Ballad of Aiden</h1>
-    <p> Journey with Aiden and his singing stallion through realms of riddles, ruin and the ridiculous.</p>
+    <h1>The   Ballad   of  Aiden</h1>
+       <h2> Journey   with   Aiden  & his   singing  stallion.</h2>
   </header>
 
   <!-- Hero Section -->
@@ -55,14 +53,14 @@
       <source src="AandRHero.mp4" type="video/mp4">
       Your browser does not support the video element.
     </video> 
-    
+ 
 
     <div id="audio-player-wrapper">
     <audio id="audio-player" controls>
       <source id="audio-source" src="" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <div id="now-playing-title">CLICK ON A CHAPTER</div>
+    <div id="now-playing-title">Click on a chapter</div>
   </div>
 <div></div>
   </section>
@@ -76,7 +74,7 @@
           <video class="thumbnail" autoplay muted loop>
             <source src="1thumbnail.mp4" type="video/mp4">
           </video>  
-          <span>Chapter 1 - A Careful What You Wish</span>
+          <span>Chapter 1 - Careful What You Wish</span>
           <button class="play-button playing">▶</button>
         </li>
 
@@ -198,10 +196,10 @@
 
  <!-- Footer Tiles -->
 <div class="footer-grid">
-  <a href="music.html" class="grid-btn navy">Listen to the soundtrack of Aiden</a>
-  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange">Buy the book or Koala Spy Merch</a>
-  <a href="index.html" class="grid-btn green">The Ballad of Aiden Homepage</a>
-  <a href="about.html" class="grid-btn sea-blue">The Story and team behind Aiden</a>
+  <a href="music.html" class="grid-btn navy">Aiden's Soundtrack</a>
+  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange">Buy book or Merch</a>
+  <a href="index.html" class="grid-btn green">Buy more chapters</a>
+  <a href="about.html" class="grid-btn sea-blue">About: story & team</a>
 </div>
 
 <p style="text-align: center;">Attribution & Production Note: Written and produced by Justine R. Kelly and Koala Spies with the voice acting of</p>
@@ -245,6 +243,13 @@
           const button = document.querySelector('.play-button');
 button.textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
 
+document.querySelectorAll('.track').forEach(track => {
+  track.addEventListener('click', () => {
+    document.querySelectorAll('.track').forEach(t => t.classList.remove('glow'));
+    track.classList.add('glow');
+  });
+});
+
         });
       });
     });
@@ -264,5 +269,6 @@ button.textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
 <link rel="stylesheet" href="styles.css">
 
 }
+
 
 
