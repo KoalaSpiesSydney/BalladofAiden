@@ -1,4 +1,4 @@
-/* Global Styles */
+* Global Styles */
 body {
 font-family: "ofelia-display", sans-serif;
 font-weight: 400;
@@ -28,7 +28,7 @@ h2 {
   font-family: "ofelia-display", sans-serif;
   font-weight: 900;
   font-style: normal;
-  color: #cdf3e6;
+  color: #022a1c;
   font-size: 2.6em;
   margin: 10px;
   line-height: 1.2;
@@ -210,6 +210,11 @@ h2 {
 
 .footer-grid {
   display: grid;
+  background-color: #fafafa;
+  font-weight: 900;
+  font-style: normal;
+  color: #022a1c;
+  font-size: 2.3rem;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 50px;
@@ -282,7 +287,7 @@ footer {
   padding: 20px;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
-  background: #e4f9ef;
+  background: #def7eb;
   border-radius: 10px;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -320,10 +325,15 @@ footer {
 }
 
 .grid-btn {
-  font-family: "adlery-pro-swash", sans-serif;
+  font-family: "ofelia-display", sans-serif;
+  color: #022a1c;
+  font-size: 2.6em;
+  margin: 10px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(6, 50, 49, 0.6);
   font-weight: 700;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 2.5em;
   padding: 15px 30px;
   border-radius: 12px;
   text-decoration: none;
@@ -469,7 +479,7 @@ footer {
 }
 
 .grid-btn {
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 12px 20px;
   border-radius: 12px;
   text-decoration: none;
@@ -492,4 +502,9 @@ footer {
        url('path/to/your/font/BricolageGrotesque-Bold700.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+}
+.credits {
+  text-align: center;
+  font-size: 0.8 rem; /* or try 18px, 110%, etc. */
+  line-height: 1.5;
 }
