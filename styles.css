@@ -1,12 +1,16 @@
-* Global Styles */
-body {
-font-family: "ofelia-display", sans-serif;
-font-weight: 400;
-font-style: normal;
-margin: 0;
-padding: 0;
-background-color: #fb9d94;
-}
+/* Global Styles */
+html, body {
+  height: 100%; /* Ensures background covers the full viewport */
+  margin: 0;
+  padding: 0;
+  font-family: "ofelia-display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fb9d94; /* Coral pink */
+  background-color: rgb(252, 115, 105);   /* Fallback name for legacy support */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+
 
 /* Header Styling */
 header {
@@ -61,9 +65,6 @@ h2 {
   z-index: 1;
   position: relative;
 }
-
-}
-
 
 #now-playing-title {
   font-family: "adlery-pro", sans-serif;
@@ -125,6 +126,7 @@ h2 {
   font-family: "ofelia-display", sans-serif;
   font-weight: 400;
   font-style: normal;
+  
 
 }
 
@@ -495,13 +497,6 @@ footer {
     font-size: 1.1em;
     padding: 14px;
   }
-}
-@font-face {
-  font-family: 'Bricolage Grotesque';
-  src: url('path/to/your/font/BricolageGrotesque-Bold700.woff2') format('woff2'),
-       url('path/to/your/font/BricolageGrotesque-Bold700.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
 }
 .credits {
   text-align: center;
