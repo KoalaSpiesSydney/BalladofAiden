@@ -51,7 +51,7 @@ h2 {
 
 .hero-video {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   aspect-ratio: 6/4;
   object-fit: cover;
   display: block;
@@ -61,7 +61,7 @@ h2 {
   z-index: 1;
   position: relative;
   border-radius: 25;
-   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
   z-index: 1;
   position: relative;
 }
@@ -86,7 +86,8 @@ h2 {
   font-style: normal;
   color: #b6f104;
   text-shadow: 0 3px 6px rgba(216, 239, 8, 0.6);
-  animation: playerPulse 4.5s infinite ease-in-out, titleBounce 2s infinite ease-in-out;
+  animation: playerPulse 4.5s infinite ease-in-out, 
+  titleBounce 2s infinite ease-in-out;
   background: linear-gradient(135deg, #fefefb, #f5eaf0);
   border: none;
   border-radius: 30px;
@@ -103,6 +104,28 @@ h2 {
     0 0 12px rgba(255, 255, 255, 0.4);
   transition: text-shadow 0.3s ease-in-out;
 }
+#audio-player-wrapper.playing #now-playing-title
+}
+@keyframes playerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+@keyframes titleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 
 #audio-player-wrapper {
   max-width: 700px;
@@ -503,6 +526,7 @@ footer {
   font-size: 0.8 rem; /* or try 18px, 110%, etc. */
   line-height: 1.5;
 }
+
 
 
 
