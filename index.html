@@ -7,9 +7,15 @@
  
   <style>
     body {
+      body {
+  background-color: #fb9d94;
+}
+
+h1 {
+  text-align: center;
+}
+
 background-color: #fb9d94
-    h1 {
-      text-align: center;
 
 }
 
@@ -218,54 +224,60 @@ Live sound recording by Isaac Zhecheng Zou. Narration is an automated voice edit
   </section>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const audioPlayer = document.getElementById('audio-player');
-      const audioSource = document.getElementById('audio-source');
-      const nowPlayingTitle = document.getElementById('now-playing-title');
-      const tracks = document.querySelectorAll('.track');
+document.getElementById("year").textContent = new Date().getFullYear();
 
-      tracks.forEach(track => {
-        track.addEventListener('click', function (event) {
-          // Prevent button from bubbling the event twice
-          if (event.target.tagName === 'BUTTON') {
-            event.stopPropagation();
-          }
+document.addEventListener('DOMContentLoaded', function () {
+  const audioPlayer = document.getElementById('audio-player');
+  const audioSource = document.getElementById('audio-source');
+  const nowPlayingTitle = document.getElementById('now-playing-title');
+  const tracks = document.querySelectorAll('.track');
 
-          const src = track.getAttribute('data-src');
-          const title = track.getAttribute('data-title');
+  tracks.forEach(track => {
+    track.addEventListener('click', function (event) {
+      // Prevent button from triggering twice if clicked
+      if (event.target.tagName === 'BUTTON') {
+        event.stopPropagation();
+      }
 
-          audioSource.src = src;
-          audioPlayer.load();
-          audioPlayer.play();
-          nowPlayingTitle.textContent = `Now Playing: ${title}`;
+      const src = track.getAttribute('data-src');
+      const title = track.getAttribute('data-title');
 
-          document.getElementById('audio-player-wrapper').classList.add('playing');
- 
-          const button = document.querySelector('.play-button');
-button.textContent = isPlaying ? '⏸️ Pause' : '▶️ Play';
+      // Set audio and play
+      audioSource.src = src;
+      audioPlayer.load();
+      audioPlayer.play();
 
-document.querySelectorAll('.track').forEach(track => {
-  track.addEventListener('click', () => {
-    document.querySelectorAll('.track').forEach(t => t.classList.remove('glow'));
-    track.classList.add('glow');
+      nowPlayingTitle.textContent = `Now Playing: ${title}`;
+      document.getElementById('audio-player-wrapper').classList.add('playing');
+
+      // Update all buttons and glow effect
+      document.querySelectorAll('.track').forEach(t => t.classList.remove('glow'));
+      track.classList.add('glow');
+
+      document.querySelectorAll('.play-button').forEach(btn => btn.textContent = '▶️ Play');
+      const playBtn = track.querySelector('.play-button');
+      playBtn.textContent = '⏸️ Pause';
     });
-  </script>
-</body>
-</html>
-<link rel="stylesheet" href="styles.css">
+  });
 
-<!-- Include MediaElement.js CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css" />
-
-<!-- Include MediaElement.js JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
+  // Optional: toggle pause/play on button click
+  document.querySelectorAll('.play-button').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        this.textContent = '⏸️ Pause';
+      } else {
+        audioPlayer.pause();
+        this.textContent = '▶️ Play';
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
 <link rel="stylesheet" href="styles.css">
 
   
-
