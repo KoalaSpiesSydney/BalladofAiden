@@ -23,7 +23,7 @@ h1 {
   font-weight: 600;
   font-style: normal;
   color: #080863; /* Dark navy */
-  font-size: 1.6em;
+  font-size: 3.6em;
   margin: 10px;
   font-style: normal;
    text-shadow: 2px 2px 4px rgba(156, 241, 135, 0.6)
@@ -31,11 +31,9 @@ h1 {
 h2 {
   font-family: "ofelia-display", sans-serif;
   font-weight: 500;
-  max-width: 400px;
-  aspect-ratio: 6/4;
   font-style: normal;
   color: #022a1c;
-  font-size: 2.6em;
+  font-size: 1.6em;
   margin: 10px;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(6, 50, 49, 0.6);
@@ -505,6 +503,7 @@ footer {
   font-size: 0.8 rem; /* or try 18px, 110%, etc. */
   line-height: 1.5;
 }
+
 
 
 
