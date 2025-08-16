@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://use.typekit.net/ahv5tjx.css">
-
+<link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: 'Roboto mono', sans-serif;
-      padding: 20px;
-    }
+
 
     h1 {
       color: rgb(238, 238, 247);
       text-align: center;
+      
+    }
+    h2{
+      color: black;
+      text-align: center;
+    }
+    h3 {
+      color: yellow;
+      text-align: center;
+
+  
     }
 
     #audio-player-wrapper {
@@ -39,6 +47,40 @@
     .track-info {
       font-weight: bold;
     }
+  
+@keyframes playerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+@keyframes titleBounce {
+  0%, 20%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slower, floatier animations */
+.playerPulse {
+  animation: playerPulse 6s infinite ease-in-out; /* slower pulse */
+}
+
+.titleBounce {
+  animation: titleBounce 4.5s infinite ease-in-out; /* slower + pause */
+}
+
+
   </style>
 </head>
 <body>
@@ -65,7 +107,7 @@
           <video class="thumbnail" autoplay muted loop>
             <source src="AndRHero.mp4" type="video/mp4">
           </video>  
-          <span>Chapter 1 - Careful What You Wish</span>
+          <bold>Chapter 1 - Careful What You Wish</bold>
         
     
         <li class="track" data-src="2Neverexpectedthis.mp3" data-title="Chapter 2 Never Expected This">
@@ -157,38 +199,17 @@
           <span>Chapter 13 - Magic Gum?</span>
           </li>
 
- </section>
-      </ul>
-    </div>
-  </section>
-</body>
-</html>
-
-
 <!-- Footer Tiles -->
-<div class="footer-grid">
-  <a href="morechapters.html" class="grid-btn navy">More Chapters</a>
-  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn orange">Merch</a>
-  <a href="music.html" class="grid-btn green">Soundtrack</a>
-  <a href="about.html" class="grid-btn sea-blue">About Us</a>
-</div>
-  </section>
-<p style="text-align: center;"> Credits and Copyright: lyrics composed by Justine Kelly and Music composed by Koala Spies Sydney.
-The music was created digitally. If you would like to sponsor the Ballad of Aiden and bring these tracks to life with live musicians, please email KoalaSpies@duck.com</p>
-
-  <!-- Copyright Section -->
-  <footer style="text-align: center; padding: 20px; margin-top: 20px; background-color: #f1f1f1;">
-    <p>&copy; <span id="year"></span> Justine Kelly & Koala Spies 2025</p>
-  </footer>
+ <section>
+<nav>
   <script>
-   document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const audioPlayer = document.getElementById('audio-player');
   const audioSource = document.getElementById('audio-source');
   const nowPlayingTitle = document.getElementById('now-playing-title');
+  const playerWrapper = document.getElementById('audio-player-wrapper');
   const tracks = document.querySelectorAll('.track');
-  
 
-  // Convert NodeList to Array for easier indexing
   const trackArray = Array.from(tracks);
   let currentTrackIndex = -1;
 
@@ -202,8 +223,16 @@ The music was created digitally. If you would like to sponsor the Ballad of Aide
     audioSource.src = src;
     audioPlayer.load();
     audioPlayer.play();
+
     nowPlayingTitle.textContent = `Now Playing: ${title}`;
     currentTrackIndex = index;
+
+    // Restart animations
+    nowPlayingTitle.classList.remove('titleBounce');
+    playerWrapper.classList.remove('playerPulse');
+    void nowPlayingTitle.offsetWidth; // Force reflow to restart animation
+    nowPlayingTitle.classList.add('titleBounce');
+    playerWrapper.classList.add('playerPulse');
   }
 
   // Handle manual track selection
@@ -216,25 +245,24 @@ The music was created digitally. If you would like to sponsor the Ballad of Aide
     });
   });
 
-  // Auto-play next track when current one ends
+  // Auto-play next track when one ends
   audioPlayer.addEventListener('ended', function () {
     const nextIndex = currentTrackIndex + 1;
     if (nextIndex < trackArray.length) {
       playTrack(nextIndex);
+    } else {
+      nowPlayingTitle.classList.remove('titleBounce');
+      playerWrapper.classList.remove('playerPulse');
     }
   });
-});
-audioPlayer.addEventListener('playing', function () {
-  if (currentButton) {
-    currentButton.classList.remove('clicked');
-    currentButton.classList.add('playing'); // This persists the yellow style
-  }
+
+  // Stop animations on pause
+  audioPlayer.addEventListener('pause', function () {
+    nowPlayingTitle.classList.remove('titleBounce');
+    playerWrapper.classList.remove('playerPulse');
+  });
 });
 
-audioPlayer.addEventListener('playing', function () {
-  document.getElementById('audio-player-wrapper').classList.add('playing');
-});
   </script>
 </body>
 </html>
-<link rel="stylesheet" href="styles.css">
