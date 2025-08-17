@@ -5,8 +5,6 @@
   <link rel="stylesheet" href="https://use.typekit.net/ahv5tjx.css">
 <link rel="stylesheet" href="styles.css">
   <style>
-
-
     h1 {
       color: rgb(238, 238, 247);
       text-align: center;
@@ -19,7 +17,6 @@
     h3 {
       color: yellow;
       text-align: center;
-
   
     }
 
@@ -79,8 +76,61 @@
 .titleBounce {
   animation: titleBounce 4.5s infinite ease-in-out; /* slower + pause */
 }
+  .site-footer {
+    width: 100%;
+    background-color: #1d0101; /* White background */
+    color: #000000;           /* Black text */
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    position: relative; /* keeps footer after content */
+    margin-top: 20px;   /* space above footer */
+  }
 
+  /* Responsive tweak for smaller devices */
+  @media (max-width: 600px) {
+    .site-footer {
+      font-size: 0.8rem;
+      padding: 12px 8px;
+    }
+  }
+    /* Reset default list styling specifically for nav */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;                   /* Arrange items in a row */
+        justify-content: space-around;   /* Evenly distribute items across the width */
+        background-color: #333;          /* Dark background for nav bar */
+    }
 
+    /* Style each link in nav */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Hover effect for nav links */
+    nav ul li a:hover {
+        background-color: #555;
+        color: #ffcc00; /* Highlight color */
+    }
+
+    /* Responsive nav */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav ul li a {
+            padding: 10px;
+        }
+    }
+  
   </style>
 </head>
 <body>
@@ -103,47 +153,39 @@
       <ul id="audio-playlist-left">
 
 
-        <li class="track" data-src="1Carefulwhatyouwish.mp3" data-title=" Chapter 1 Careful What You Wish">
+          <li class="track" data-src="1Carefulwhatyouwish.mp3" data-title=" Chapter 1 Careful What You Wish">
           <video class="thumbnail" autoplay muted loop>
-            <source src="AndRHero.mp4" type="video/mp4">
+          <source src="Chapter1c.mp4" type="video/mp4">
           </video>  
-          <bold>Chapter 1 - Careful What You Wish</bold>
-        
-    
-        <li class="track" data-src="2Neverexpectedthis.mp3" data-title="Chapter 2 Never Expected This">
+          <span>Chapter 1 - Careful What You Wish</span>
+          <li class="track" data-src="2Neverexpectedthis.mp3" data-title="Chapter 2 Never Expected This">
           <video class="thumbnail" autoplay muted loop>  
-            <source src="2thumbnail.mp4" type="video/mp4">
+          <source src="2thumbnail.mp4" type="video/mp4">
           </video>
-            <span> Chapter 2 Never Expected This</span>
-      
-        <li class="track" data-src="3Itcanbe.mp3" data-title="Chapter 3 Can it be so?">
+          <span> Chapter 2 Never Expected This</span>
+          <li class="track" data-src="3Itcanbe.mp3" data-title="Chapter 3 Can it be so?">
           <video class="thumbnail" autoplay muted loop>
-            <source src="3thumbnail.mp4" type="video/mp4">
+          <source src="Chapter3.mp4" type="video/mp4">
           </video>
            <span> Chapter 3 It can be so</span>
-
-        <li class="track" data-src="4almostround.mp3" data-title="Chapting 4 the Almost Round Table">
+          <li class="track" data-src="4almostround.mp3" data-title="Chapting 4 the Almost Round Table">
           <video class="thumbnail" autoplay muted loop>
-            <source src="4thumbnail.mp4" type="video/mp4">
+          <source src="Chapter4b.mp4" type="video/mp4">
           </video>
           <span>Chapter 4 - the Almost Round Table</span>
-        
-        <li class="track" data-src="5Philosophising.mp3" data-title="Chapter 5 Philosophising">
+          <li class="track" data-src="5Philosophising.mp3" data-title="Chapter 5 Philosophising">
           <video class="thumbnail" autoplay muted loop>
-            <source src="5thumbnail.mp4" type="video/mp4">
+          <source src="5thumbnail.mp4" type="video/mp4">
           </video>
           <span>Chapter 5 - Philosophising </span>
-        
-
-        <li class="track" data-src="6imprisoned.mp3" data-title="Chapter 6 the Tower of Liquorice">
+          <li class="track" data-src="6imprisoned.mp3" data-title="Chapter 6 the Tower of Liquorice">
           <video class="thumbnail" autoplay muted loop>
-            <source src="6thumbnail.mp4" type="video/mp4">
+          <source src="6thumbnail.mp4" type="video/mp4">
           </video>
           <span>Chapter 6 - the Tower of Liquorice</span>
-    
           <li class="track" data-src="AlgoritmoDoomScrollClick.mp3" data-title="Sponsor Aiden">
           <video class="thumbnail" autoplay muted loop>
-            <source src="sponsorAiden.mp4" type="video/mp4">
+          <source src="sponsorAiden.mp4" type="video/mp4">
           </video>
           <span>Sponsor Aiden</span>
           </li>
@@ -197,11 +239,27 @@
             <source src="13.thumbnail.mp4" type="video/mp4">  
             </video>
           <span>Chapter 13 - Magic Gum?</span>
-          </li>
+                   </li>
+        </ul>
+  </section>
 
-<!-- Footer Tiles -->
- <section>
-<nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">AIDENHome</a></li>
+      <li><a href="music.html">Soundtrack</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="morechapters.html">PART2</a></li>
+    </ul>
+  </nav>
+
+Copyright
+<!-- Copyright Footer -->
+<footer class="site-footer">
+  <p>&copy; <span id="2025"></span> 2025 Justine Kelly & Koala Spies</p>
+</footer>
+  </body>
+</html>
+
   <script>
 document.addEventListener('DOMContentLoaded', function () {
   const audioPlayer = document.getElementById('audio-player');
@@ -230,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Restart animations
     nowPlayingTitle.classList.remove('titleBounce');
     playerWrapper.classList.remove('playerPulse');
-    void nowPlayingTitle.offsetWidth; // Force reflow to restart animation
+    void nowPlayingTitle.offsetWidth; // Force reflow
     nowPlayingTitle.classList.add('titleBounce');
     playerWrapper.classList.add('playerPulse');
   }
@@ -245,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Auto-play next track when one ends
+  // Auto-play next track
   audioPlayer.addEventListener('ended', function () {
     const nextIndex = currentTrackIndex + 1;
     if (nextIndex < trackArray.length) {
@@ -262,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
     playerWrapper.classList.remove('playerPulse');
   });
 });
+</script>
 
-  </script>
-</body>
-</html>
+
+
