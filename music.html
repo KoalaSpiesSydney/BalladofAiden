@@ -45,7 +45,7 @@
 
 .wave-animation {
   font-family: "goodlife-script", sans-serif;
-  font-size: 2.6;
+  font-size: 2.6rem;
   overflow: hidden;
   border-right: 0.15em solid orange;
   white-space: nowrap;
@@ -54,8 +54,60 @@
     typing 8s steps(30, end) infinite,
     blink-caret 2.75s step-end infinite;
 }
+  .site-footer {
+    width: 100%;
+    background-color: #1d0101; /* White background */
+    color: #000000;           /* Black text */
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    position: relative; /* keeps footer after content */
+    margin-top: 20px;   /* space above footer */
+  }
 
+  /* Responsive tweak for smaller devices */
+  @media (max-width: 600px) {
+    .site-footer {
+      font-size: 0.8rem;
+      padding: 12px 8px;
+    }
+  }
+    /* Reset default list styling specifically for nav */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;                   /* Arrange items in a row */
+        justify-content: space-around;   /* Evenly distribute items across the width */
+        background-color: #333;          /* Dark background for nav bar */
+    }
 
+    /* Style each link in nav */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Hover effect for nav links */
+    nav ul li a:hover {
+        background-color: #555;
+        color: #ffcc00; /* Highlight color */
+    }
+
+    /* Responsive nav */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav ul li a {
+            padding: 10px;
+        }
+    }
   </style>
 </head>
 <body>
@@ -107,7 +159,7 @@
          <li class="track" data-src="hmmm_mmm_marvelous.mp3" data-title="🎵Mmm-marvelous">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3>🎵Mmm-marvelous </h3></span>
-  
+      </li>
       <li class="track" data-src="Nepoboy.mp3" data-title="🎵Nepo boy🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3>🎵Nepo Boy </h3></span>
@@ -190,7 +242,7 @@
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3>Leaving Home in an Air Balloon </h3></span>
           </ul>
-          </ul>
+
 
  <h2>Part 2 </h2>
       </li>
@@ -206,24 +258,29 @@
         <li class="track" data-src="braverhymeswith.mp3" data-title="Brave rhymes">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3>Brave rhymes </h3></span>
+         </li>
+        </ul>
   </section>
-<!-- Footer Tiles -->
-<nav>
-  <a href="morechapters.html" class="grid-btn">More Chapters</a>
-  <a href="https://koalaspies.myportfolio.com/work" class="grid-btn">Merch</a>
-  <a href="index.html" class="grid-btn">The Ballad HOME</a>
-  <a href="about.html" class="grid-btn">About Us</a>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">AIDENHome</a></li>
+      <li><a href="music.html">Soundtrack</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="morechapters.html">PART2</a></li>
+    </ul>
+  </nav>
 
-<p style="text-align: center;"> Credits and Copyright: lyrics composed by Justine Kelly and Music composed by Koala Spies Sydney. If you would like to sponsor the Ballad of Aiden and bring these tracks to life with live musicians, please email KoalaSpies@duck.com</p>
+Copyright
+<!-- Copyright Footer -->
+<footer class="site-footer">
+  <p>&copy; <span id="2025"></span> 2025 Justine Kelly & Koala Spies</p>
+</footer>
 
-  <!-- Copyright Section -->
-  <footer style="text-align: center; padding: 20px; margin-top: 20px; background-color: #f1f1f1;">
-    <p>&copy; Justine Kelly & Koala Spies 2025</p>
-  </footer>
   </body>
 </html>
 <script>
+
+  
 document.addEventListener('DOMContentLoaded', function () {
   const audioPlayer = document.getElementById('audio-player');
   const audioSource = document.getElementById('audio-source');
@@ -293,6 +350,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
-
-
-
