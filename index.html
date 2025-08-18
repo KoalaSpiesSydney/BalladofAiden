@@ -130,13 +130,42 @@
             padding: 10px;
         }
     }
-  
+  .title-header {
+  position: relative;
+  height: 250px; /* adjust depending on how tall you want the section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.title-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the area without distortion */
+  z-index: 0;
+}
+
+.title-header h1 {
+  position: relative;
+  z-index: 1;
+  color: rgb(238, 238, 247);
+  text-align: center;
+  font-size: 7rem; /* adjust to your liking */
+  text-shadow: 2px 2px 8px black; /* makes text readable over video */
+}
   </style>
 </head>
 <body>
-
-<header><h1>The Ballad of Aiden</h1></header>
-  
+    <header class="title-header">
+  <video autoplay muted loop playsinline class="title-video">
+    <source src="Untitled (5).mp4" type="video/mp4">
+  </video>
+  <h1>The Ballad of Aiden</h1>
+</header>
   <div id="audio-player-wrapper">
     
     <audio id="audio-player" controls>
@@ -153,11 +182,11 @@
       <ul id="audio-playlist-left">
 
 
-          <li class="track" data-src="1Carefulwhatyouwish.mp3" data-title=" Chapter 1 Careful What You Wish">
+          <li class="track" data-src="1Carefulwhatyouwish.mp3" data-title="What You Wish">
           <video class="thumbnail" autoplay muted loop>
           <source src="Chapter1c.mp4" type="video/mp4">
           </video>  
-          <span>Chapter 1 - Careful What You Wish</span>
+          <span><h4>Chapter 1 - Careful What You Wish </h4></span>
           <li class="track" data-src="2Neverexpectedthis.mp3" data-title="Chapter 2 Never Expected This">
           <video class="thumbnail" autoplay muted loop>  
           <source src="2thumbnail.mp4" type="video/mp4">
@@ -321,13 +350,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
-
-
-
-
-
-
-
-
 
