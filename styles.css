@@ -44,13 +44,23 @@ h2 {
 
 h3 {
   font-family: "goodlife-script", sans-serif;
-  color: rgb(18, 18, 18);
+  color: rgb(236, 226, 226);
   font-weight: 400;
   font-style: normal;
   font-size: 2.2rem;
   margin: 10px;
   line-height: 2.2;
   text-shadow: 2px 2px 4px rgb(180, 180, 180);
+}
+h4 {
+  font-family: "avenir-next-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: rgb(245, 245, 240);
+  margin: 10px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgb(4, 36, 47);
 }
 
 p {
@@ -70,13 +80,13 @@ font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
   font-style: normal;
   font-size: 2.6em;
-  color: rgb(180, 180, 180);
+  color: rgb(237, 249, 206);
   text-shadow: 0 1px 2px rgb(0, 153, 204);
   margin: 30px auto 20px auto;
   text-align: center;
   background-color: rgb(22, 1, 1);
   max-width: 900px;
-  border-radius: 5px;
+  border-radius: 90px;
   box-shadow:
     0 0 30px rgba(255, 255, 255, 0.7),
     0 0 50px rgba(255, 255, 160, 0.4),
@@ -169,10 +179,11 @@ font-family: 'Courier New', Courier, monospace;
   padding: 20px;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
-  background: rgb(0, 153, 204);
+  background: rgb(173, 242, 240);
   border-radius: 10px;
   justify-content: space-between;
   flex-wrap: wrap;
+  opacity: 99%;
 }
 
 .track.glow {
@@ -196,7 +207,7 @@ font-family: 'Courier New', Courier, monospace;
   width: 180px;
   height: 105px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 90px;
   flex-shrink: 0;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -234,3 +245,4 @@ font-family: 'Courier New', Courier, monospace;
     gap: 40px;
   }
 }
+
