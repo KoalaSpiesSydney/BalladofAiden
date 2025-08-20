@@ -43,24 +43,24 @@ h2 {
 }
 
 h3 {
-  font-family: "goodlife-script", sans-serif;
-  color: rgb(236, 226, 226);
-  font-weight: 400;
-  font-style: normal;
+  font-family: "all-round-gothic", sans-serif;
+font-weight: 400;
+font-style: normal;
   font-size: 2.2rem;
   margin: 10px;
   line-height: 2.2;
   text-shadow: 2px 2px 4px rgb(180, 180, 180);
 }
 h4 {
-  font-family: "avenir-next-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.2rem;
-  color: rgb(245, 245, 240);
+  font-family: "all-round-gothic", sans-serif;
+font-weight: 500;
+font-style: normal;
+  font-size: 1.4rem;
+  color: rgb(1, 16, 22);
+  border-color: rgb(235, 229, 229);
   margin: 10px;
-  line-height: 1.2;
-  text-shadow: 2px 2px 4px rgb(4, 36, 47);
+  line-height: 1.7;
+  text-shadow: 2px 2px 4px rgb(242, 245, 246);
 }
 
 p {
@@ -134,9 +134,9 @@ font-family: 'Courier New', Courier, monospace;
 #audio-player-wrapper {
   max-width: 900px;
   margin: auto;
-  box-shadow: 0 4px 8px rgb(180, 180, 180);
+  box-shadow: 0 4px 8px rgb(248, 245, 206);
   height: 200px;
-  border-radius: 25px;
+  border-radius: 90px;
 }
 
 /* ===== PLAY BUTTON ===== */
@@ -153,13 +153,14 @@ font-family: 'Courier New', Courier, monospace;
 /* ===== AUDIO PLAYER GRID ===== */
 .audio-player {
   display: grid;
+  max-width: 900px;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 30px;
   padding: 20px;
   margin: 20px 0;
   width: 90%;
-  border-radius: 25px;
+  border-radius: 90px;
 }
 
 /* ===== PLAYLIST GRID ===== */
@@ -177,7 +178,7 @@ font-family: 'Courier New', Courier, monospace;
   align-items: center;
   gap: 40px;
   padding: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #1b0202;
   cursor: pointer;
   background: rgb(173, 242, 240);
   border-radius: 10px;
