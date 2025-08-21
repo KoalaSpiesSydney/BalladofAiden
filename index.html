@@ -5,36 +5,16 @@
   <link rel="stylesheet" href="https://use.typekit.net/ahv5tjx.css">
 <link rel="stylesheet" href="styles.css">
   <style>
-    h1 {
-      color: rgb(238, 238, 247);
-      text-align: center;
-      
-    }
-    h2{
-      color: black;
-      text-align: center;
-    }
-    h3 {
-      color: yellow;
-      text-align: center;
-  
-    }
 
     #audio-player-wrapper {
       text-align: center;
       margin-bottom: 20px;
+      margin-top: 10px;
     }
 
     .playlist {
       list-style: none;
       padding: 0;
-    }
-
-    .track {
-      cursor: pointer;
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
     }
 
     .play-button {
@@ -154,6 +134,7 @@
   height: 100%;
   object-fit: cover; /* fills the area without distortion */
   z-index: 0;
+  opacity: 30%;
 }
 
 .title-header h1 {
@@ -162,7 +143,7 @@
   color: rgb(238, 238, 247);
   text-align: center;
   font-size: 7rem; /* adjust to your liking */
-  text-shadow: 2px 2px 8px black; /* makes text readable over video */
+  text-shadow: 2px 2px 8px #353535; /* makes text readable over video */
 }
   </style>
 </head>
@@ -281,14 +262,13 @@
 
   <nav>
     <ul>
-      <li><a href="https://koalaspies.myportfolio.com/work">Merch </a></li>
-      <li><a href="music.html">Soundtrack</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="morechapters.html">Part 2... in continuation...</a></li>
+      <li><a href="https://koalaspies.myportfolio.com/work"><h5>Merch</h5> </a></li>
+      <li><a href="music.html"><h5> Soundtrack</h5></a></li>
+      <li><a href="about.html"><h5> About</h5></a></li>
+      <li><a href="morechapters.html"><h5> Part 2..in continuation...</h5></a></li>
     </ul>
   </nav>
 
-Copyright
 <!-- Copyright Footer -->
 <footer class="site-footer">
   <p>&copy; <span id="2025"></span> 2025 Justine Kelly & Koala Spies</p>
@@ -357,8 +337,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
-
 
 
 
