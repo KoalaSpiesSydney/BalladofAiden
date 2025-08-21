@@ -5,7 +5,7 @@ html, body {
   padding: 0;
   font-weight: 400;
   font-style: normal;
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(21, 1, 1);
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -19,14 +19,15 @@ body {
 header {
   text-align: center;
   padding: 40px;
+  background-color: rgb(21, 1, 1)
 }
 
 h1 {
   font-family: "adlery-pro-swash", sans-serif;
-  font-weight: 900;
+  font-weight: 400;
   font-style: normal;
-  color: rgb(230, 230, 230);
-  font-size: 7.6em;
+  color: #f5f4f2;;
+  font-size: 5.6em;
   margin: 10px;
   text-shadow: 2px 2px 4px rgb(0, 153, 204);
 }
@@ -36,7 +37,7 @@ h2 {
   font-weight: 800;
   font-style: italic;
   font-size: 2.2rem;
-  color: rgb(180, 180, 180);
+  color: #ebe9e4;;
   margin: 10px;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgb(0, 153, 204);
@@ -49,20 +50,31 @@ font-style: normal;
   font-size: 2.2rem;
   margin: 10px;
   line-height: 2.2;
-  text-shadow: 2px 2px 4px rgb(180, 180, 180);
+  color: antiquewhite;
+    text-shadow: 2px 2px 4px #353535;
 }
 h4 {
   font-family: "all-round-gothic", sans-serif;
 font-weight: 500;
 font-style: normal;
   font-size: 1.4rem;
-  color: rgb(1, 16, 22);
+  color: #353535;
   border-color: rgb(235, 229, 229);
   margin: 10px;
   line-height: 1.7;
-  text-shadow: 2px 2px 4px rgb(242, 245, 246);
 }
 
+h5 {
+  font-family: "all-round-gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin: 10px;
+  line-height: 2.2;
+  color: antiquewhite;
+    text-shadow: 2px 2px 4px #353535;
+  }
+  
 p {
 font-family: 'Courier New', Courier, monospace;
  color: rgb(238, 230, 230);
@@ -180,11 +192,15 @@ font-family: 'Courier New', Courier, monospace;
   padding: 20px;
   border-bottom: 1px solid #1b0202;
   cursor: pointer;
-  background: rgb(173, 242, 240);
-  border-radius: 10px;
+  background: #ffcc00;
+  border-radius: 45px;
   justify-content: space-between;
   flex-wrap: wrap;
-  opacity: 99%;
+  opacity: 100%;
+  margin-top: 15px;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .track.glow {
@@ -210,12 +226,10 @@ font-family: 'Courier New', Courier, monospace;
   object-fit: cover;
   border-radius: 90px;
   flex-shrink: 0;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(237, 237, 235, 0.2);
   position: relative;
   z-index: 1;
 }
-
-/* ===== BUTTONS ===== */
 
 
 /* ===== RESPONSIVE ===== */
@@ -247,3 +261,80 @@ font-family: 'Courier New', Courier, monospace;
   }
 }
 
+ nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;                   /* Arrange items in a row */
+        justify-content: space-around;   /* Evenly distribute items across the width */
+        background-color: #333;          /* Dark background for nav bar */
+    }
+
+    /* Style each link in nav */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Hover effect for nav links */
+    nav ul li a:hover {
+        background-color: #555;
+        color: #ffcc00; /* Highlight color */
+    }
+
+    /* Responsive nav */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav ul li a {
+            padding: 10px;
+        }
+    }
+    /* Reset default list styling specifically for nav */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;                   /* Arrange items in a row */
+        justify-content: space-around;   /* Evenly distribute items across the width */
+        background-color: #333;          /* Dark background for nav bar */
+    }
+
+    /* Style each link in nav */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        transition: 0.3s, color 0.3s;
+        font-family: "all-round-gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.7rem;
+        text-shadow: 2px 2px 4px rgb(4, 36, 47);
+    }
+
+    /* Hover effect for nav links */
+    nav ul li a:hover {
+        background-color: #555;
+        color: #ffcc00; /* Highlight color */
+    }
+
+    /* Responsive nav */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav ul li a {
+            padding: 10px;
+        }
