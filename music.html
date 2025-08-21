@@ -58,16 +58,49 @@
         typing 8s steps(30, end) infinite,
         blink-caret 2.75s step-end infinite;
     }
+  /* Reset default list styling specifically for nav */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;                   /* Arrange items in a row */
+        justify-content: space-around;   /* Evenly distribute items across the width */
+        background-color: #333;          /* Dark background for nav bar */
+    }
 
-    .site-footer {
-      width: 100%;
-      background-color: #1d0101;
-      color: #000000;
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 0.9rem;
-      position: relative;
-      margin-top: 20px;
+    /* Style each link in nav */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        transition: 0.3s, color 0.3s;
+        font-family: "all-round-gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.7rem;
+        text-shadow: 2px 2px 4px rgb(4, 36, 47);
+    }
+
+    /* Hover effect for nav links */
+    nav ul li a:hover {
+        background-color: #555;
+        color: #ffcc00; /* Highlight color */
+    }
+
+    /* Responsive nav */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+        nav ul li a {
+            padding: 10px;
+        }
+
     }
 
     /* Responsive tweak for smaller devices */
@@ -141,11 +174,7 @@
   </style>
 </head>
 <body>
-
 <header class="title-header">
-  <video autoplay muted loop playsinline class="title-video">
-    <source src="3Moons1.mp4" type="video/mp4">
-  </video>
   <h1>The Ballad of Aiden <br> Soundtrack</h1>
 </header>
 <div id="audio-player-wrapper">
@@ -153,7 +182,10 @@
     <source id="audio-source" src="" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-  <div id="now-playing-title"><h2>🎵 Click on Song</h2></div>
+  <div id="now-playing-title"><h2><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+<span style="color: rgb#ffcc00;">&#9835;</span> <!-- ♫ (U+266B) -->
+ Click on Song<span style="color: red;">&#9835....&#9833;;</span> <!-- ♫ (U+266B) -->
+</h2></div>
 </div>
 
     <!-- Playlist Grid -->
@@ -162,66 +194,91 @@
       <ul id="audio-playlist-left">
         
 
- <li class="track" data-src="Rumpa-tum- tump, de tump de tump.mp3" data-title="🎵 Rumpa Tum tump🎵 ">
+ <li class="track" data-src="Rumpa-tum- tump, de tump de tump.mp3" data-title="Rumpa Tum tump">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵 Rumpa Tum Tump</h3></span>
+        <span class="track-info"><h3> <span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->Rumpa Tum Tump</h3></span>
       </li>
 
       <li class="track" data-src="Mmmmmimpetuous.mp3" data-title="🎵 Mmmmm impetutous🎵 ">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵 Mmm impetuous</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
+ Mmm impetuous<span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+</h3></span>
       </li>
 
       <li class="track" data-src="fiesty.mp3" data-title="🎵Feisty, I've never seen a woman so feisty 🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Feisty</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Feisty</h3></span>
       </li>
          <li class="track" data-src="Beautysolost.mp3" data-title="🎵Beauty so lost🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Beauty so lost</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Beauty so lost<span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+</h3></span>
       </li>
-      <li class="track" data-src="Runlikeanleopard.mp3" data-title="🎵Run Like a Leopard🎵">
+      <li class="track" data-src="Runlikeanleopard.mp3" data-title="Run Like a Leopard🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Run Like a Leopard</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->Run Like a Leopard <span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --></h3></span>
       </li>
         <li class="track" data-src="Thefirstandthesecond.mp3" data-title="🎵The first and thenSecond🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵 the first and the second</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->the first and the second<span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
       </li>
          <li class="track" data-src="hmmm_mmm_marvelous.mp3" data-title="🎵Mmm-marvelous">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Mmm-marvelous </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9833;....&#9833;;</span> <!-- ♫ (U+266B) -->
+Mmm-marvelous <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+</h3></span>
       </li>
       <li class="track" data-src="Nepoboy.mp3" data-title="🎵Nepo boy🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Nepo Boy </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
+<span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+<span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->
+<span style="color: red;">&#9838;</span> <!-- ♫ (U+266B) -->Nepo Boy </h3></span>
       <li class="track" data-src="Bahbah1.mp3" data-title="🎵Bah bah Black Bip 🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Bah bah black ship how I wonder </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+Bah bah <span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: purple; font-size: 24px;">&#9836;</span> <!-- ♬ -->
+<span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
+<span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+</h3></span>
         <li class="track" data-src="Dontbelievetheirlies.mp3" data-title="🎵Don't believe their lies🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Don't believe their lies </h3></span>
-        <li class="track" data-src="Waaaaaaah,.mp3" data-title="🎵Waaaaah🎵">
+        <span class="track-info"><h3><span style="color: red;">&#9835;</span> Don't believe their lies </h3></span>
+        <li class="track" data-src="Waaaaaaah,.mp3" data-title="Waaaaah🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Waaaaah </h3></span>
+        <span class="track-info"><h3><span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ --><span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+
+<span style="color: purple; font-size: 24px;">&#9836;</span> <!-- ♬ -->
+<span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+Waaaaah <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
         <li class="track" data-src="ordinary.mp3" data-title="🎵Ordinary🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3> 🎵 Odinary 🎵</h3></span>
+        <span class="track-info"><h3> <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->
+<span style="color: red;">&#9838;</span> <!-- ♫ (U+266B) --> Odinary <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
          <li class="track" data-src="Sabotageyeah.mp3" data-title="🎵Sabotage🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3> 🎵Sabotage</h3></span>
+        <span class="track-info"><h3> <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Sabotage <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
         
           </ul>
 
       <h2>Mixes</h2>
       </li>
-      <li class="track" data-src="Umdotclaplityclap.mp3" data-title="🎵Umdotclaplityclap">
+      <li class="track" data-src="Umdotclaplityclap.mp3" data-title= "Umdotclaplityclap">
       <button class="play-button playing">▶</button>
-      <span class="track-info"><h3>🎵Um dot dot clapity clap meditation </h3></span>
+      <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Um dot dot clapity clap meditation <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
        </li>
         <li class="track" data-src="Ordinaryextendedmix.mp3" data-title="🎵Ordinary extended mix🎵">
       <button class="play-button playing">▶</button>
-      <span class="track-info"><h3>🎵Ordinary Extended Mix </h3></span>
+      <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->
+Ordinary Extended Mix <span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: purple; font-size: 24px;">&#9836;</span> <!-- ♬ --></h3></span>
        </li>
        <li class="track" data-src="AlgoritmoDoomScrollClick.mp3" data-title="">
       <button class="play-button playing">▶</button>
@@ -233,45 +290,61 @@
     <div class="playlist-column">
       <ul id="audio-playlist-right">
 
-        <li class="track" data-src="Iamadrummingmonkey.mp3" data-title="🎵I am a drumming monkey🎵">
+        <li class="track" data-src="Iamadrummingmonkey.mp3" data-title="🎵I am a drumming monkey">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵I am a drumming monkey </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->I am a drumming monkey </h3></span>
         <li class="track" data-src="Uhh.mp3" data-title="🎵Ordinary extended mix 2🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵He's mine, uhhh</h3></span>
-       <li class="track" data-src="Cowards.mp3" data-title="🎵Cowards🎵">
+        <span class="track-info"><h3><span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->He's mine, uhhh<span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ --></h3></span>
+       <li class="track" data-src="Cowards.mp3" data-title="Cowards🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵 Cowards</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --> Cowards</h3></span>
       </li>
       <li class="track" data-src="Shessodroll.mp3" data-title="🎵She's so droll🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵She's so droll </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
+She's so droll <span style="color: red">&#9836;;</span> <!-- ♫ (U+266B) -->
+</h3></span>
       </li>
      <li class="track" data-src="Uuuuuhhhhh.mp3" data-title="🎵Uuuuuuhhhhhh🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Uuuuuuhhhhhh </h3></span>
+        <span class="track-info"><h3><span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: purple; font-size: 24px;">&#9836;</span> <!-- ♬ -->Uuuuuuhhhhhh </h3></span>
       </li>
-      <li class="track" data-src="You.mp3" data-title="🎵You choose who you are🎵">
+      <li class="track" data-src="You.mp3" data-title="You choose who you are🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵You choose who you are </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->You choose who you are </h3></span>
         <li class="track" data-src="Numberoneprimetimetotallyviral.mp3" data-title="Numer one totally viral block buster">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Numer one totally viral block buster </h3></span>
+        <span class="track-info"><h3>
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
+Numer one totally viral block buster </h3></span>
         <li class="track" data-src="ministerforhomelandaffair.mp3" data-title="Leavinghomeinairballoon">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>I'm the Minister for Homeland Affairs</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->
+the Minister for Homeland Affairs<span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+</h3></span>
        <li class="track" data-src="Whatsthepoint.mp3" data-title="🎵What's the point🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵 What's the point</h3></span>
+        <span class="track-info"><h3>
+<span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: purple; font-size: 24px;">&#9836;</span> <!-- ♬ -->
+<span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
+ What's the point</h3></span>
         <li class="track" data-src="leapwithhope.mp3" data-title="🎵Leap with hope🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Leap with hope </h3></span> 
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Leap with hope </h3></span> 
         <li class="track" data-src="downdowntheytrottedfree.mp3" data-title="🎵down down they trotted free🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>🎵Down down they trotted free </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->Down down they trotted free </h3></span>
         <li class="track" data-src="Leavinghomeinairballoon.mp3" data-title="Leavinghomeinairballoon">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Leaving Home in an Air Balloon </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Leaving Home in an Air Balloon </h3></span>
         </li>
           </ul>
 
@@ -280,34 +353,35 @@
       </li>
         <li class="track" data-src="Betterinflatable.mp3" data-title="🎵inflatable  🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Better Inflatable</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;;</span> <!-- ♫ (U+266B) -->
+Better Inflatable</h3></span>
         <li class="track" data-src="AlgoritmoDoomScrollClick.mp3" data-title="ALgoritmo Doom Scroll Click">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Algoritmo Doom Scroll Click </h3></span>
-        <li class="track" data-src="Onomatopoeicword.mp3" data-title="Onomatopoeicwords">
+        <span class="track-info"><h3><span style="color: red;">&#9836;;</span> <!-- ♫ (U+266B) -->
+Algoritmo Doom Scroll Click </h3></span>
+        <li class="track" data-src="Onomatopoeicwords.mp3" data-title="Onomatopoeicwords">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Onomatopoeic Words </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9833;;</span> <!-- ♫ (U+266B) -->
+Onomatopoeic Words </h3></span>
         <li class="track" data-src="braverhymeswith.mp3" data-title="Brave rhymes">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3>Brave rhymes </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+Brave rhymes </h3></span>
          </li>
         </ul>
   </section>
   <nav>
     <ul>
-      <li><a href="index.html"><h3> the Ballad of Aiden</h3></a></li>
-      <li><a href="https://koalaspies.myportfolio.com/work"><h3> Merch </h3></a></li>
-      <li><a href="about.html"><h3>About</h3></a></li>
-      <li><a href="morechapters.html"><h3>Part 2... in continuation...</h3></a></li>
+      <li><a href="index.html"><h5> the Ballad of Aiden</h5></a></li>
+      <li><a href="https://koalaspies.myportfolio.com/work"><h5> Merch </h5></a></li>
+      <li><a href="about.html"><h5>About</h5></a></li>
+      <li><a href="morechapters.html"><h5>Part 2... in continuation class</h5></a></li>
     </ul>
   </nav>
-
-Copyright
 <!-- Copyright Footer -->
 <footer class="site-footer">
   <p>&copy; <span id="2025"></span> 2025 Justine Kelly & Koala Spies</p>
 </footer>
-
   </body>
 </html>
 <script>
@@ -380,7 +454,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 });
-
 </script>
-
-
