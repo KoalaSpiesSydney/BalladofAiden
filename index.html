@@ -56,16 +56,7 @@
 .titleBounce {
   animation: titleBounce 4.5s infinite ease-in-out; /* slower + pause */
 }
-  .site-footer {
-    width: 100%;
-    background-color: #1d0101; /* White background */
-    color: #000000;           /* Black text */
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.9rem;
-    position: relative; /* keeps footer after content */
-    margin-top: 20px;   /* space above footer */
-  }
+
 
   /* Responsive tweak for smaller devices */
   @media (max-width: 600px) {
@@ -74,49 +65,7 @@
       padding: 12px 8px;
     }
   }
-    /* Reset default list styling specifically for nav */
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;                   /* Arrange items in a row */
-        justify-content: space-around;   /* Evenly distribute items across the width */
-        background-color: #333;          /* Dark background for nav bar */
-    }
-
-    /* Style each link in nav */
-    nav ul li a {
-        display: block;
-        padding: 15px 20px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        transition: 0.3s, color 0.3s;
-        font-family: "all-round-gothic", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1.7rem;
-        text-shadow: 2px 2px 4px rgb(4, 36, 47);
-    }
-
-    /* Hover effect for nav links */
-    nav ul li a:hover {
-        background-color: #555;
-        color: #ffcc00; /* Highlight color */
-    }
-
-    /* Responsive nav */
-    @media (max-width: 600px) {
-        nav ul {
-            flex-direction: column;
-        }
-        nav ul li a {
-            padding: 10px;
-        }
-    }
+  
   .title-header {
   position: relative;
   height: 250px; /* adjust depending on how tall you want the section */
@@ -195,7 +144,7 @@
           <source src="Chapter5.mp4" type="video/mp4">
           </video>
           <span><h4>Chapter 5 <br> Philosophising</h4></span>
-          <li class="track" data-src="6imprisoned.mp3" data-title="Chapter 6 the Tower of Liquorice">
+          <li class="track" data-src="6theTower.mp3" data-title="Chapter 6 the Tower of Liquorice">
           <video class="thumbnail" autoplay muted loop>
           <source src="lavanderfields.mp4" type="video/mp4">
           </video>
@@ -337,8 +286,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
-
-
-
 
 
