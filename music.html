@@ -110,58 +110,6 @@
         padding: 12px 8px;
       }
 
-      nav ul {
-        flex-direction: column;
-      }
-
-      nav ul li a {
-        padding: 10px;
-      }
-    }
-
-    /* Reset default list styling specifically for nav */
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-      background-color: #333;
-    }
-
-    nav ul li a {
-      display: block;
-      padding: 15px 20px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    nav ul li a:hover {
-      background-color: #555;
-      color: #ffcc00;
-    }
-
-    .title-header {
-      position: relative;
-      width: 100%;
-      height: auto; /* or auto */
-      overflow: hidden;
-
-}
-.title-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  object-fit: cover; /* fills the area without distortion */
-  z-index: 0;
-  opacity: 30%;
-}
-
 .title-header h1 {
   position: relative;
   z-index: 1;
@@ -208,7 +156,9 @@
 
       <li class="track" data-src="fiesty.mp3" data-title="🎵Feisty, I've never seen a woman so feisty 🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Feisty</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Feisty<span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+</h3></span>
       </li>
          <li class="track" data-src="Beautysolost.mp3" data-title="🎵Beauty so lost🎵">
         <button class="play-button playing">▶</button>
@@ -235,7 +185,7 @@ Mmm-marvelous <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
 <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
 <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->
 <span style="color: red;">&#9838;</span> <!-- ♫ (U+266B) -->Nepo Boy </h3></span>
-      <li class="track" data-src="Bahbah1.mp3" data-title="🎵Bah bah Black Bip 🎵">
+      <li class="track" data-src="Bahbah1.mp3" data-title="Bah bah Black Bip 🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
 Bah bah <span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
@@ -384,9 +334,8 @@ Brave rhymes </h3></span>
 </footer>
   </body>
 </html>
-<script>
 
-  
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   const audioPlayer = document.getElementById('audio-player');
   const audioSource = document.getElementById('audio-source');
@@ -443,7 +392,6 @@ document.addEventListener('DOMContentLoaded', function () {
   audioPlayer.addEventListener('pause', () => {
     titleElement.classList.remove('wave-animation');
   });
-
   // Restart animation on play
   audioPlayer.addEventListener('play', () => {
     titleElement.classList.remove('wave-animation');
@@ -451,7 +399,6 @@ document.addEventListener('DOMContentLoaded', function () {
     titleElement.classList.add('wave-animation');
 
     titleElement.innerHTML = `🎵 Now Playing: ${title} 🎵`;
-
   });
 });
 </script>
