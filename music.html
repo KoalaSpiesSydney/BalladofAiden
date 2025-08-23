@@ -59,38 +59,7 @@
         blink-caret 2.75s step-end infinite;
     }
   /* Reset default list styling specifically for nav */
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;                   /* Arrange items in a row */
-        justify-content: space-around;   /* Evenly distribute items across the width */
-        background-color: #333;          /* Dark background for nav bar */
-    }
 
-    /* Style each link in nav */
-    nav ul li a {
-        display: block;
-        padding: 15px 20px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        transition: 0.3s, color 0.3s;
-        font-family: "all-round-gothic", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1.7rem;
-        text-shadow: 2px 2px 4px rgb(4, 36, 47);
-    }
-
-    /* Hover effect for nav links */
-    nav ul li a:hover {
-        background-color: #555;
-        color: #ffcc00; /* Highlight color */
-    }
 
     /* Responsive nav */
     @media (max-width: 600px) {
@@ -132,7 +101,7 @@
   </audio>
   <div id="now-playing-title"><h2><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
 <span style="color: rgb#ffcc00;">&#9835;</span> <!-- ♫ (U+266B) -->
- Click on Song<span style="color: red;">&#9835....&#9833;;</span> <!-- ♫ (U+266B) -->
+ Click on Song<span style="color: red;">&#9835....&#9833;</span> <!-- ♫ (U+266B) -->
 </h2></div>
 </div>
 
@@ -157,6 +126,9 @@
       <li class="track" data-src="fiesty.mp3" data-title="🎵Feisty, I've never seen a woman so feisty 🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Feisty<span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: green; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: red; font-size: 24px;">&#9836;</span> <!-- ♬ --><span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
 <span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
 </h3></span>
       </li>
@@ -176,7 +148,7 @@
          <li class="track" data-src="hmmm_mmm_marvelous.mp3" data-title="🎵Mmm-marvelous">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9833;....&#9833;;</span> <!-- ♫ (U+266B) -->
-Mmm-marvelous <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
+Mmm-marvelous<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ --> <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
 </h3></span>
       </li>
       <li class="track" data-src="Nepoboy.mp3" data-title="🎵Nepo boy🎵">
@@ -184,11 +156,11 @@ Mmm-marvelous <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
         <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->
 <span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
 <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->
-<span style="color: red;">&#9838;</span> <!-- ♫ (U+266B) -->Nepo Boy </h3></span>
+<span style="color: red;">&#9838;</span> <!-- ♫ (U+266B) -->Nepo Boy<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ --> </h3></span>
       <li class="track" data-src="Bahbah1.mp3" data-title="Bah bah Black Bip 🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
-Bah bah <span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+Bah bah<span style="color: red;">&#9836;</span> <span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
 <span style="color: blue; font-size: 24px;">&#9837;</span> <!-- ♭ -->
 <span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ -->
 <span style="color: purple; font-size: 24px;">&#9836;</span> <!-- ♬ -->
@@ -197,7 +169,8 @@ Bah bah <span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
 </h3></span>
         <li class="track" data-src="Dontbelievetheirlies.mp3" data-title="🎵Don't believe their lies🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3><span style="color: red;">&#9835;</span> Don't believe their lies </h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9835;</span> Don't believe their lies<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ --> <span style="color: blue;">&#9836;</span> <!-- ♫ (U+266B) -->
+<span style="color: green;">&#9838;</span> <!-- ♫ (U+266B) --></h3></span>
         <li class="track" data-src="Waaaaaaah,.mp3" data-title="Waaaaah🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ --><span style="color: red; font-size: 24px;">&#9835;</span> <!-- ♫ -->
@@ -212,7 +185,8 @@ Waaaaah <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></spa
 <span style="color: red;">&#9838;</span> <!-- ♫ (U+266B) --> Odinary <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
          <li class="track" data-src="Sabotageyeah.mp3" data-title="🎵Sabotage🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3> <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Sabotage <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
+        <span class="track-info"><h3> <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Sabotage<span style="color: blue;">&#9836;</span> <!-- ♫ (U+266B) -->
+<span style="color: green;">&#9838;</span> <!-- ♫ (U+266B) --> <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
         
           </ul>
 
@@ -220,7 +194,8 @@ Waaaaah <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></spa
       </li>
       <li class="track" data-src="Umdotclaplityclap.mp3" data-title= "Umdotclaplityclap">
       <button class="play-button playing">▶</button>
-      <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Um dot dot clapity clap meditation <span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
+      <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Um dot dot clapity clap meditation  <span style="color: blue; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: green; font-size: 24px;">&#9837;</span> <!-- ♭ --><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) --></h3></span>
        </li>
         <li class="track" data-src="Ordinaryextendedmix.mp3" data-title="🎵Ordinary extended mix🎵">
       <button class="play-button playing">▶</button>
@@ -250,7 +225,10 @@ Ordinary Extended Mix <span style="color: red; font-size: 24px;">&#9835;</span> 
 <span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ --></h3></span>
        <li class="track" data-src="Cowards.mp3" data-title="Cowards🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --> Cowards</h3></span>
+        <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --> Cowards<span style="color: green; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: red; font-size: 24px;">&#9836;</span> <!-- ♬ -->
+<span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --></h3></span>
       </li>
       <li class="track" data-src="Shessodroll.mp3" data-title="🎵She's so droll🎵">
         <button class="play-button playing">▶</button>
@@ -288,7 +266,10 @@ the Minister for Homeland Affairs<span style="color: red;">&#9835;</span> <!-- �
  What's the point</h3></span>
         <li class="track" data-src="leapwithhope.mp3" data-title="🎵Leap with hope🎵">
         <button class="play-button playing">▶</button>
-        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Leap with hope </h3></span> 
+        <span class="track-info"><h3><span style="color: red;">&#9836;</span> <!-- ♫ (U+266B) -->Leap with hope <span style="color: green; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: red; font-size: 24px;">&#9836;</span> <!-- ♬ -->
+<span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) --></h3></span> 
         <li class="track" data-src="downdowntheytrottedfree.mp3" data-title="🎵down down they trotted free🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9834;</span> <!-- ♫ (U+266B) -->Down down they trotted free </h3></span>
@@ -304,11 +285,13 @@ the Minister for Homeland Affairs<span style="color: red;">&#9835;</span> <!-- �
         <li class="track" data-src="Betterinflatable.mp3" data-title="🎵inflatable  🎵">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9836;;</span> <!-- ♫ (U+266B) -->
-Better Inflatable</h3></span>
+Better Inflatable <span style="color: blue; font-size: 24px;">&#9835;</span> <!-- ♫ -->
+<span style="color: green; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: red; font-size: 24px;">&#9839;</span> <!-- ♯ --><span style="color: red;">&#9836;</span></h3></span>
         <li class="track" data-src="AlgoritmoDoomScrollClick.mp3" data-title="ALgoritmo Doom Scroll Click">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9836;;</span> <!-- ♫ (U+266B) -->
-Algoritmo Doom Scroll Click </h3></span>
+Algoritmo Doom Scroll Click <span style="color: green; font-size: 24px;">&#9839;</span> <!-- ♯ --></h3></span>
         <li class="track" data-src="Onomatopoeicwords.mp3" data-title="Onomatopoeicwords">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9833;;</span> <!-- ♫ (U+266B) -->
@@ -316,7 +299,9 @@ Onomatopoeic Words </h3></span>
         <li class="track" data-src="braverhymeswith.mp3" data-title="Brave rhymes">
         <button class="play-button playing">▶</button>
         <span class="track-info"><h3><span style="color: red;">&#9835;</span> <!-- ♫ (U+266B) -->
-Brave rhymes </h3></span>
+Brave rhymes <span style="color: green; font-size: 24px;">&#9837;</span> <!-- ♭ -->
+<span style="color: blue; font-size: 24px;">&#9839;</span> <!-- ♯ -->
+<span style="color: red; font-size: 24px;">&#9836;</span> <!-- ♬ --></h3></span>
          </li>
         </ul>
   </section>
